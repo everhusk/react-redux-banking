@@ -6,7 +6,7 @@ const DepositPage = (props) => {
     <div>
       <h1>Deposits:</h1>
       {props.deposits.map(function(deposit, index){
-        return <h2 key={ index }>+${deposit.amount} @ {deposit.timestamp}</h2>;
+        return <h2 key={index}>+${deposit.amount} @ {deposit.timestamp}</h2>;
       })}
     </div>
   );

@@ -4,9 +4,9 @@ import {connect} from 'react-redux';
 const WithdrawPage = (props) => {
   return (
     <div>
-      <h1>Deposits:</h1>
+      <h1>Withdrawals:</h1>
       {props.withdrawals.map(function(withdraw, index){
-        return <h2 key={ index }>-${withdraw.amount} @ {withdraw.timestamp}</h2>;
+        return <h2 key={index}>-${withdraw.amount} @ {withdraw.timestamp}</h2>;
       })}
     </div>
   );

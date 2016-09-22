@@ -9,7 +9,7 @@ class HomePage extends React.Component {
     super(props,context);
     this.state = {
       amount: this.props.account.balance
-    }
+    };
     this.handleChange = this.handleChange.bind(this);
     this.deposit = this.deposit.bind(this);
     this.withdraw = this.withdraw.bind(this);
@@ -39,12 +39,13 @@ class HomePage extends React.Component {
         <button onClick={this.withdraw}>Make Withdrawal</button>
 
       </div>
-    )
+    );
   }
 }
 
 HomePage.propTypes = {
-  account: PropTypes.object.isRequired
+  account: PropTypes.object.isRequired,
+  actions: PropTypes.object
 };
 
 function mapStateToProps(state) {
