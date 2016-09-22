@@ -3,6 +3,14 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as actions from '../actions/bankActions';
 
+import {
+  Button,
+  Input,
+  Divider,
+  Header,
+  Grid
+} from 'stardust';
+
 class HomePage extends React.Component {
 
   constructor(props,context){
@@ -31,12 +39,41 @@ class HomePage extends React.Component {
     const {account} = this.props.account;
     return (
       <div>
-        <h1>Current Bank Balance: ${account.balance}</h1>
 
-        <h2>Enter an amount:</h2>
-        <input type="number" onChange={this.handleChange}/><br/>
-        <button onClick={this.deposit}>Make Deposit</button>
-        <button onClick={this.withdraw}>Make Withdrawal</button>
+        <Divider/>
+
+        <h2 className="ui icon header">
+          <i className="university icon"/>
+          <div className="content">
+            Welcome to the Bank of React
+            <div className="sub header">Powered by React & Redux.</div>
+          </div>
+        </h2>
+
+        <Divider/>
+
+        <h1>Current Balance<br/><span className={account.balance >= 0 ? "green" : "red"}>${account.balance}</span></h1>
+
+        <Divider/>
+
+        <Grid>
+
+          <div className="eight wide column">
+
+            <Header>Make a Deposit</Header>
+            <Input type="number" onChange={this.handleChange}/><br/><br/>
+            <Button className="green" onClick={this.deposit} placeholder="Enter $ Amount">Deposit</Button>
+
+          </div>
+          <div className="eight wide column">
+
+            <Header>Make a Withdrawal</Header>
+            <Input type="number" onChange={this.handleChange}/><br/><br/>
+            <Button className="red" onClick={this.withdraw} placeholder="Enter $ Amount">Withdraw</Button>
+
+          </div>
+
+        </Grid>
 
       </div>
     );

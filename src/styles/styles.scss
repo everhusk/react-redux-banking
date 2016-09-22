@@ -15,23 +15,18 @@ body {
   -moz-font-smoothing: antialiased;
   font-smoothing: antialiased;
   font-weight: 300;
-}
-table{
-  border-width: 1px;
-  border-color: 'black'
-}
-tr{
-  padding: 50px;
-}
-td {
-	padding: 12px;
+  text-align: center !important;
+  margin: auto !important;
 }
 
+h1{
+}
 h2 {
-	color: $vin-blue;
+}
+.balance{
+  font-size: 100 !important;
 }
 
-.savings { color: $vin-green; }
-.loss { color: $vin-red; }
+.green { color: $vin-green; }
+.red { color: $vin-red; }
 input.small { width: 46px; }
-td.fuel-savings-label { width: 175px; }
