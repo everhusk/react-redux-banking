@@ -30,3 +30,13 @@ h2 {
 .green { color: $vin-green; }
 .red { color: $vin-red; }
 input.small { width: 46px; }
+
+footer{
+  position: 'absolute';
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  margin-top: 50px;
+  text-align: 'center';
+}

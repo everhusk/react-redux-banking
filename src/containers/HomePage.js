@@ -46,7 +46,7 @@ class HomePage extends React.Component {
           <i className="university icon"/>
           <div className="content">
             Welcome to the Bank of React
-            <div className="sub header">Powered by React & Redux.</div>
+            <div className="sub header">Powered by Redux.</div>
           </div>
         </h2>
 
